@@ -1,0 +1,27 @@
+[
+  {
+    "nombre": "Sebastian",
+    "apellido": "Peguero",
+    "telefono": "+1-829-302-0445"
+  },
+  {
+    "nombre": "Raydelto",
+    "apellido": "Hernandez",
+    "telefono": "809-555-0199"
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Lopez",
+    "telefono": "809-123-4567"
+  },
+  {
+    "nombre": "Maria",
+    "apellido": "Garcia",
+    "telefono": "829-555-5678"
+  },
+  {
+    "nombre": "Ada",
+    "apellido": "Lovelace",
+    "telefono": "809-555-4321"
+  }
+]
