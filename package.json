@@ -1,0 +1,23 @@
+{
+  "name": "tarea5-servicio-web",
+  "version": "1.0.0",
+  "description": "Tarea 5: Servicio Web con Node.js y Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "rest-api",
+    "agenda",
+    "itla"
+  ],
+  "author": "Sebastian Peguero",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
