@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicio Web Agenda | Tarea 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/client.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <div class="header-brand">
+        <div class="brand-icon">
+          <img src="jojo-logo.jpg" alt="Logo de JoJo's" class="brand-img">
+        </div>
+        <div class="brand-text">
+          <h1>Servicio Web Express</h1>
+          <p>Programación Web · Tarea 5</p>
+        </div>
+      </div>
+
+      <div class="header-meta">
+        <span class="badge-layer">
+          <span class="badge-pulse"></span>
+          <span>Conectado a la lista de contactos</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="endpoint-banner">
+      <div class="endpoint-info">
+        <span class="method-tag">GET</span>
+        <span class="method-tag post">POST</span>
+        <span class="endpoint-url">http://localhost:3000/agenda.php</span>
+      </div>
+      <div>
+        <a href="/agenda.php" target="_blank" class="btn-secondary">Ver JSON en Vivo</a>
+      </div>
+    </section>
+
+    <div class="dashboard-layout">
+      <aside class="form-panel">
+        <div class="panel-header">
+          <h2 class="panel-title">Probar POST /agenda.php</h2>
+        </div>
+
+        <form id="formCrear" novalidate>
+          <div class="form-group">
+            <label for="inputNombre" class="form-label">Nombre</label>
+            <input type="text" id="inputNombre" class="form-input" placeholder="Ej. Sebastian" required autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label for="inputApellido" class="form-label">Apellido</label>
+            <input type="text" id="inputApellido" class="form-input" placeholder="Ej. Peguero" required autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label for="inputTelefono" class="form-label">Teléfono</label>
+            <input type="tel" id="inputTelefono" class="form-input" placeholder="Ej. 829-302-0445" required autocomplete="off">
+          </div>
+
+          <button type="submit" class="btn-primary">Enviar POST</button>
+        </form>
+      </aside>
+
+      <section class="results-panel">
+        <div class="panel-header">
+          <h2 class="panel-title">Respuesta JSON del Servicio Web</h2>
+          <button type="button" id="btnRefresh" class="btn-secondary">Refrescar GET</button>
+        </div>
+
+        <pre id="jsonViewer" class="json-viewer">Cargando...</pre>
+
+        <h3 style="font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--text-muted);">Contactos Renderizados</h3>
+        <div id="contactsContainer" class="contacts-grid"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 · Sebastian Peguero · Tarea 5: Servicio Web (8 puntos) · Programación Web</p>
+  </footer>
+
+  <div id="toastNotification" class="toast-notification"></div>
+
+</body>
+</html>
